@@ -10,7 +10,9 @@ angular.module('login-app')
                };
               
                LoginService.doLogin(userRequest).then(function(response){
-                      window.location = "/home.html";               	
+                        if(response){
+                           window.location = "/home.html";
+                        }
                });
            };
        }]);
